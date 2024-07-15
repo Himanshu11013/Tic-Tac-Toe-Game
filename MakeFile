@@ -1,0 +1,25 @@
+# Define compiler and flags
+CXX = g++
+CXXFLAGS = -I/opt/homebrew/Cellar/sfml/2.6.1/include
+LDFLAGS = -L/opt/homebrew/Cellar/sfml/2.6.1/lib -lsfml-graphics -lsfml-window -lsfml-system
+
+# Define the target executable
+TARGET = tictactoe
+
+# Define the source files
+SRCS = tictactoe.cpp
+
+# Define the object files
+OBJS = $(SRCS:.cpp=.o)
+
+# Build the target executable
+$(TARGET): $(OBJS)
+	$(CXX) -o $(TARGET) $(OBJS) $(LDFLAGS)
+
+# Compile source files into object files
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean up the build files
+clean:
+	rm -f $(TARGET) $(OBJS)
