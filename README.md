@@ -1,5 +1,5 @@
 # Tic Tac Toe Game using SFML
-![Game Screenshot](screenshot.png)
+![Game Screenshot](https://github.com/user-attachments/assets/0aaecf9d-2a96-410c-8f9c-f91c944f2dbc)
 ## Overview
 
 This project implements a simple Tic Tac Toe game where the player competes against an AI opponent. The AI uses the minimax algorithm to make optimal moves, ensuring a challenging gameplay experience.
